@@ -6,12 +6,12 @@ import Projects from './components/projects'
 function App() {
 
   return (
-    <div className='h-screen w-screen bg-slate-900 overflow-hidden text-slate-100'>
+    <div className='h-screen w-screen bg-slate-900 overflow-auto text-slate-100'>
       <TopBarComponent/>
       {/* Main content */}
-      <div className='flex flex-col justify-center items-center my-20 m-auto w-max'>
+      <div className='flex flex-col m-auto w-max my-20 '>
       {/* Content Page */}
-        <div className='w-[30rem] lg:w-[38rem] xl:w-[46rem] 2xl:w-[50rem]'>
+        <div className='w-[20rem] md:w-[30rem] lg:w-[38rem] xl:w-[46rem] 2xl:w-[50rem]'>
           <AboutComponent/>
           <Projects/>
           <RightSideBarComponent/>

@@ -4,7 +4,7 @@ function AboutComponent()
         <>
         <div className="">
             <h1 className="text-xl lg:text-2xl border-b-4 border-b-sky-800 rounded-md font-bold text-center pb-4 select-none" id="#about">About</h1>
-            <div className="flex justify-center text-md lg:text-lg mt-6 text-white p-4 text-center">
+            <div className="flex justify-center text-md text-center lg:text-lg mt-6 text-white p-4">
                 <p>
                 Let's first take a look at how this effect works. 
                 It needs to have a group class on the parent element. 
