@@ -11,7 +11,7 @@
     }
     .list-v
     {
-        @apply text-sm text-emerald-200 select-none font-mono;
+        @apply text-sm text-emerald-200 select-none font-mono align-middle group-hover:text-white;
 
     }
 
