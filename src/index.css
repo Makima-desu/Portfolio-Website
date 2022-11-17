@@ -4,15 +4,20 @@
 
 @layer components
 {
-    .list
+    /* Top Bar CSS */
+    /* List when screen is smaller than md */
+    .listSM
     {
-        @apply list-none hover:cursor-pointer m-1 hover:text-sky-600 transition-all select-none;
+        @apply flex flex-row gap-4 items-center p-2 hover:bg-slate-400 border-b border-b-slate-900 transition-all;
 
     }
-    .list-v
+    /* List when screen is md+ */
+    .listMD
     {
-        @apply text-sm text-emerald-200 select-none font-mono align-middle group-hover:text-white;
+        @apply flex flex-row justify-center w-8 h-8 hover:text-white transition-all text-gray-400;
 
     }
+    /* Homepage CSS */
+
 
 }
