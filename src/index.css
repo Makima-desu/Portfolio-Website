@@ -8,7 +8,7 @@
     /* List when screen is smaller than md */
     .listSM
     {
-        @apply flex flex-row gap-4 items-center p-2 hover:bg-slate-400 border-b border-b-slate-900 transition-all;
+        @apply flex flex-row gap-4 items-center p-4 py-4 justify-center hover:bg-slate-500 border-b border-b-slate-900 transition-all select-none;
 
     }
     /* List when screen is md+ */
