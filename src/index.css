@@ -18,6 +18,21 @@
 
     }
     /* Homepage CSS */
+    .project-container
+    {
+        @apply rounded-lg p-3 bg-gray-300 overflow-hidden items-center shadow-lg;
+
+    }
+    .inner-project-contianer
+    {
+        @apply bg-slate-700 w-80 h-max pb-4 md:w-[22rem] rounded-lg border border-zinc-900 overflow-hidden; 
+
+    }
+    .external-project-container
+    {
+        @apply mt-4 p-2 rounded-full items-center text-center bg-slate-700 border font-bold text-slate-200;
+
+    }
 
 
 }

@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <TopBar/>
+      {/* In between add a component for things like dark/light theme and maybe more */}
       <Homepage/>
 
     </>
