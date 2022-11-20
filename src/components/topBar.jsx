@@ -1,14 +1,75 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useInsertionEffect } from "react"
 
 
 function TopBar()
 {
     // show visible element of links to repository and profile
     const [showBlock, setShowBlock] = useState(false)
-    const [blur, setBlur] = useState(false)
-
     const block = useRef(null)
     const menuButton = useRef(null)
+    const clock = useRef(null)
+    
+    
+    // react starts screaming if i use setTime() inside useEffect
+    // probably better to use setTime or any similiar useState in a seperate function
+    function CreateClock()
+    {
+        const [time, setTime] = useState(new Date())
+
+        function refreshClock()
+        {
+            return setTime(new Date())
+            
+        }
+        
+        // update clock
+        useEffect( () =>
+        {
+            const timerId = setInterval(refreshClock, 1000)
+
+            if (clock && clock.current)
+            {
+                clock.current.addEventListener('click', (event) =>
+                {
+                    if (localStorage.getItem('time') === 'en-US')
+                    {
+                        localStorage.setItem('time', 'en-GB')
+
+                    }
+                    else if (localStorage.getItem('time') === 'en-GB')
+                    {
+                        localStorage.setItem('time', 'en-US')
+
+                    }
+                    
+
+                })
+
+            }
+
+            return function cleanUp() {clearInterval(timerId)}
+
+        }, [])
+        
+        // localStorage.getItem('time')
+
+        if (localStorage.getItem('time') === null)
+        {
+            localStorage.setItem('time', 'en-US')
+            return time.toLocaleTimeString()
+        
+        }
+        else 
+        {
+            return time.toLocaleTimeString(localStorage.getItem('time'))
+
+        }
+
+
+    }
+    
+
+
 
     // to hide the pop up box
     useEffect( () =>
@@ -44,8 +105,10 @@ function TopBar()
                 <h1 className="">Portfolio website</h1>
             </div>
             {/* Personal Links in the right corner of the top bar */}
-            <div className="flex flex-row ml-auto w-max items-center">
-
+            <div className="hidden md:flex items-center font-light text-xl lg:text-4xl select-none w-full md:justify-center">
+                <h1 className="tracking-widest cursor-pointer" ref={clock}><CreateClock/></h1>
+            </div>
+            <div className="flex flex-row ml-auto items-center">
                 {/* Pop up with links when screen is smaller than md */}
                 <div className="flex">
                     <button ref={menuButton} onClick={() => setShowBlock(true)}>

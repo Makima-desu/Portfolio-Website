@@ -1,7 +1,7 @@
 function Homepage()
 {
     return (
-        <div className="mt-10 md:w-[30rem] md:m-auto lg:w-[40rem] xl:w-[40rem] 2xl:w-[46rem] md:mt-10">
+        <div className="mt-10 md:w-[30rem] md:m-auto lg:w-[40rem] xl:w-[40rem] 2xl:w-[46rem] md:p-4">
             <div className="p-4">
                 <h1 className="flex flex-row items-center text-3xl gap-1 font-extrabold underline underline-offset-8 decoration-sky-500">
                 About
@@ -54,16 +54,16 @@ function Homepage()
                 <div className="p-2 text-lg text-slate-300 mt-4">
                     <p className="font-bold text-center">Note: <span className="font-normal">ranked by category from left to right.</span></p>
                     <div className="p-4 mt-2">
-                        <h1 className="font-extrabold text-2xl">Languages</h1>
+                        <h1 className="font-extrabold text-2xl text-center pb-4">Languages</h1>
                         <ul className="flex flex-row gap-6 justify-center m-4" >
                             <a href="https://www.javascript.com" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">JavaScript</li></a>
                             <a href="https://www.typescriptlang.org" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 transition-all hover:text-blue-300 overflow-hidden">TypeScript</li></a>
                             <a href="https://www.learncpp.com" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">C++</li></a>
                         </ul>
-                        <h1 className="font-extrabold text-2xl mt-4">Libraries</h1>
+                        <h1 className="font-extrabold text-2xl mt-8 text-center pb-4">Libraries</h1>
                         <ul className="grid grid-cols-2 md:grid-cols-3 gap-6 m-4 text-center text-md md:text-lg">
                             <a href="https://reactjs.org" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 transition-all hover:text-blue-300 overflow-hidden">React.js</li></a>
-                            <a href="https://tailwindcss.com" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">TailwindCSS</li></a>
+                            <a href="https://tailwindcss.com" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">Tailwind</li></a>
                             <a href="https://nextjs.org" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">Next.js</li></a>
                             <a href="https://angular.io/guide/router-tutorial" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">Angular</li></a>
                             <a href="https://www.electronjs.org" target="blank"><li className="border p-2 rounded-md hover:bg-slate-500 hover:text-blue-300 transition-all overflow-hidden">Electron.js</li></a>
@@ -73,7 +73,7 @@ function Homepage()
                 </div>
             </div>
             {/* Credits */}
-            <div className="p-4 mt-10">
+            <div className="p-4 mt-10 pb-14">
                 <h1 className="flex flex-row items-center text-3xl gap-1 font-extrabold underline underline-offset-8 decoration-sky-500">
                     Credits
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8">
