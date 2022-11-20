@@ -1,5 +1,5 @@
-import Homepage from "./components/homepage"
 import TopBar from "./components/topBar"
+import Homepage from "./components/homepage"
 
 function App() {
 
@@ -8,7 +8,6 @@ function App() {
       <TopBar/>
       {/* In between add a component for things like dark/light theme and maybe more */}
       <Homepage/>
-
     </>
 
   )

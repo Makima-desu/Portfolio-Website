@@ -36,7 +36,7 @@ function TopBar()
 
     return (
         // Top Bar
-        <div className="sticky flex bg-slate-800 border-b border-b-slate-500 p-4">
+        <div className="sticky flex bg-slate-800 border-b border-b-slate-500 p-4 backdrop-blur-sm bg-indigo-900/5">
             {/* Website Logo element */}
             <div className="flex flex-row items-center gap-2 font-light text-xl lg:text-2xl select-none">
                 <img src="/logo.png" className="w-10 md:w-11 lg:w-12 rounded-full"></img>
@@ -76,11 +76,15 @@ function TopBar()
                                     </svg>
                                     <h1>GitHub Profile</h1>
                                 </a>
-                                <a href="https://github.com/Makima-desu/Portfolio-Website" target="blank" className="listSM border-b-0">
+                                <a href="https://github.com/Makima-desu/Portfolio-Website" target="blank" className="listSM">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                                     </svg>
                                     <h1>Website Repository</h1>
+                                </a>
+                                <a href="https://www.chess.com/member/alittlebitofchessing" target="blank" className="listSM border-b-0">
+                                    <img src="P-white.svg" className="w-8 h-8"></img>
+                                    <h1>Chess.com Profile</h1>
                                 </a>
                             </div>
                         </div>
